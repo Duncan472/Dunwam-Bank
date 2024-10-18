@@ -1,0 +1,35 @@
+[33mcommit 57a9b59125924a54339b08d1e2be36c5fcd7ef35[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Duncan472 <fduncan472@gamail.com>
+Date:   Wed Oct 16 14:12:48 2024 +0300
+
+    Continued to build the Login page
+
+[33mcommit be8c8711cdb7439a94bc1aae8e85781962b3e42f[m
+Author: Duncan472 <fduncan472@gamail.com>
+Date:   Wed Oct 16 11:32:19 2024 +0300
+
+    modified fxml
+
+[33mcommit 108b385be3b384876fba96e0bffae4e58136c8d0[m
+Author: Duncan472 <fduncan472@gamail.com>
+Date:   Tue Oct 15 12:41:55 2024 +0300
+
+    Added login fxml
+
+[33mcommit cee0d7a8150d7d2fb28ed49027462fe865cc56c7[m
+Author: Duncan472 <fduncan472@gamail.com>
+Date:   Thu Oct 10 21:53:39 2024 +0300
+
+    Added login fxml
+
+[33mcommit e4d82ef77fbbf20ed8730f3b38d01580e3bca158[m
+Author: Duncan472 <fduncan472@gamail.com>
+Date:   Wed Oct 9 17:17:40 2024 +0300
+
+    modified xml
+
+[33mcommit fae004182b7c36a60f35eb585004c79496e9c8d1[m
+Author: Duncan472 <fduncan472@gamail.com>
+Date:   Wed Oct 9 17:07:19 2024 +0300
+
+    Created the Project Structure for a Bank Management System
