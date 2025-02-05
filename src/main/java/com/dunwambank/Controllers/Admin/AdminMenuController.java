@@ -23,6 +23,7 @@ public class AdminMenuController implements Initializable {
     @FXML
     private Button logoutButton;
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addListeners();
