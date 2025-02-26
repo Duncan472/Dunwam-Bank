@@ -7,6 +7,7 @@ module com.dunwam.dunwambank {
 
 
     opens com.dunwambank to javafx.fxml;
+    opens com.dunwambank.Controllers to javafx.fxml;
     exports com.dunwambank;
     exports com.dunwambank.Controllers;
     exports com.dunwambank.Controllers.Admin;
