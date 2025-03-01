@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.FontIconTableCell?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.ClientController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="202.0" styleClass="menu_container" />
+      <AnchorPane prefHeight="400.0" prefWidth="202.0" styleClass="menu_container">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="59.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Home.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="14.0" layoutY="82.0" mnemonicParsing="false" text="Dashboard">
+               <graphic>
+                  <FontIconTableCell />
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="115.0" mnemonicParsing="false" text="Transactions">
+               <graphic>
+                  <FontIcon />
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="157.0" mnemonicParsing="false" text="Accounts">
+               <graphic>
+                  <FontIcon iconLiteral="AMAZON" selectionEnd="1" text="AMAZON" wrappingWidth="10.0" />
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="200.0" mnemonicParsing="false" text="Profile">
+               <graphic>
+                  <FontIcon />
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="237.0" mnemonicParsing="false" text="Log Out" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>
