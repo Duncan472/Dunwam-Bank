@@ -16,7 +16,7 @@ public class LoginController  {
     @FXML
     public Button loginButton;
     @FXML
-    public Button cancelButton;
+    private Button cancelButton;
     @FXML
     public Hyperlink forgotPasswordHyperlink;
     @FXML
