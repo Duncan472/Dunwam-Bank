@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a61694b5-f884-41b5-9ae0-0c966e42ddfe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/Client/ClientMenuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Client.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Client.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +29,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3

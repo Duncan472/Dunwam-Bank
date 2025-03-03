@@ -5,15 +5,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="main_menu_container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.ClientController">
-   <AnchorPane prefHeight="400.0" prefWidth="176.0" styleClass="left_container">
+   <AnchorPane prefHeight="400.0" prefWidth="176.0" styleClass="main_menu_container">
       <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="32.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../Images/Home.png" />
-         </image>
+         <Image url="@../../Images/Home.png" />
       </ImageView>
       <Button layoutX="23.0" layoutY="86.0" mnemonicParsing="false" text="Dashboard">
          <graphic>
@@ -40,14 +39,15 @@
             <FontIcon iconLiteral="fa-level-up" />
          </graphic>
       </Button>
-      <AnchorPane layoutX="3.0" layoutY="291.0" prefHeight="109.0" prefWidth="178.0">
-         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug?" />
-         <Label layoutX="7.0" layoutY="38.0" text="Use this to report any Error" />
-         <Button layoutX="14.0" layoutY="64.0" mnemonicParsing="false" text="Report!">
+      <AnchorPane layoutX="3.0" layoutY="291.0" prefHeight="109.0" prefWidth="178.0" styleClass="report_container">
+         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="report_container Text" text="Report Bug?" />
+         <Label layoutX="7.0" layoutY="38.0" styleClass="report_container Label" text="Use this to report any Error" />
+         <Button layoutX="14.0" layoutY="64.0" mnemonicParsing="false" styleClass="report_container Button" text="Report!">
             <graphic>
                <FontIcon iconLiteral="fa-plus" />
             </graphic>
          </Button>
       </AnchorPane>
+      <Line endX="100.0" layoutX="79.0" layoutY="186.0" startX="-100.0" />
    </AnchorPane>
 </AnchorPane>

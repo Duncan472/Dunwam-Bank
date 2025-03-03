@@ -4,14 +4,30 @@
     -fx-alignment: center;
 
 }
-.left_container{
-    -fx-background-color:#FFFFFF;
-    -fx-background-radius: 10px;
-    -fx-effect: dropshadow(two-pass-box, #AAAAAA,5,8,8,4);
+
+.report_container{
+    -fx-background-color: #EEFFEE;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+    -fx-spacing:10;
+    -fx-padding: 10 0 10 0;
 
 }
-.title_container{
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 20 20 0 0;
-}
+.report_container Text{
+    -fx-font-weight: bold;
+    -fx-fill: #132A13;
 
+}
+.report_container Label{
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+.report_container Button{
+    -fx-pref-width:80;
+    -fx-background-color: #132A13;
+    -fx-fill; #FFFFFF;
+}
+.report_container Button:hover{
+    -fx-cursor:hand;
+
+}
