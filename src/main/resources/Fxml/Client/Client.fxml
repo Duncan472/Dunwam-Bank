@@ -14,27 +14,27 @@
       <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="32.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../Images/Home.png" />
       </ImageView>
-      <Button layoutX="23.0" layoutY="86.0" mnemonicParsing="false" text="Dashboard">
+      <Button fx:id="dashboard_btn" layoutX="23.0" layoutY="86.0" mnemonicParsing="false" text="Dashboard">
          <graphic>
             <FontIcon iconLiteral="fa-home" />
          </graphic>
       </Button>
-      <Button layoutX="28.0" layoutY="124.0" mnemonicParsing="false" text="Transactions">
+      <Button fx:id="transaction_btn" layoutX="28.0" layoutY="124.0" mnemonicParsing="false" text="Transactions">
          <graphic>
             <FontIcon iconLiteral="fa-handshake-o" />
          </graphic>
       </Button>
-      <Button layoutX="26.0" layoutY="161.0" mnemonicParsing="false" text="Accounts">
+      <Button fx:id="account_btn" layoutX="26.0" layoutY="161.0" mnemonicParsing="false" text="Accounts">
          <graphic>
             <FontIcon iconLiteral="fa-address-card-o" />
          </graphic>
       </Button>
-      <Button layoutX="27.0" layoutY="200.0" mnemonicParsing="false" text="Profile">
+      <Button fx:id="profile_btn" layoutX="27.0" layoutY="200.0" mnemonicParsing="false" text="Profile">
          <graphic>
             <FontIcon iconLiteral="fa-smile-o" />
          </graphic>
       </Button>
-      <Button layoutX="28.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Log Out">
+      <Button fx:id="logout_btn" layoutX="28.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Log Out">
          <graphic>
             <FontIcon iconLiteral="fa-level-up" />
          </graphic>
@@ -42,7 +42,7 @@
       <AnchorPane layoutX="3.0" layoutY="291.0" prefHeight="109.0" prefWidth="178.0" styleClass="report_container">
          <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="report_container Text" text="Report Bug?" />
          <Label layoutX="7.0" layoutY="38.0" styleClass="report_container Label" text="Use this to report any Error" />
-         <Button layoutX="14.0" layoutY="64.0" mnemonicParsing="false" styleClass="report_container Button" text="Report!">
+         <Button fx:id="report_btn" layoutX="14.0" layoutY="64.0" mnemonicParsing="false" styleClass="report_container Button" text="Report!">
             <graphic>
                <FontIcon iconLiteral="fa-plus" />
             </graphic>
