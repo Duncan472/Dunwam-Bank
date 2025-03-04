@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="712.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.DashboardController">
+   <children>
+      <Text layoutX="41.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi, Patrick" AnchorPane.bottomAnchor="665.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+      <Label layoutX="725.0" layoutY="30.0" text="Label" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
+      <Text layoutX="743.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts Summary" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0" />
+      <Text layoutX="74.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Accounts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+      <AnchorPane layoutX="107.0" layoutY="156.0" prefHeight="180.0" prefWidth="620.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0" />
+      <AnchorPane layoutX="644.0" layoutY="132.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.leftAnchor="650.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0" />
+      <Text layoutX="27.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latest Transactions" />
+      <Text layoutX="806.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latest" />
+   </children>
+</AnchorPane>

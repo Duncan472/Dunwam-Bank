@@ -1,21 +1,29 @@
 
 .main_menu_container{
-    -fx-background-color;#EEEEEE;
+    -fx-background-color:#27cc14;
     -fx-alignment: center;
-
+    -fx-background-radius: 0 10 10 0;
 }
-
+.main_menu_container_profile_btn{
+    -fx-background-color: #132A13;
+    -fx-text-fill :#FFFFFF;
+    -fx-font-size:1.1em;
+}
+.main_menu_container_logout_btn{
+    -fx-background-color:#c26e63;
+    -fx-text-fill:#000000;
+    -fx-alignment:center-left
+}
 .report_container{
     -fx-background-color: #EEFFEE;
     -fx-background-radius: 10;
     -fx-alignment: center;
     -fx-spacing:10;
     -fx-padding: 10 0 10 0;
-
 }
 .report_container Text{
     -fx-font-weight: bold;
-    -fx-fill: #132A13;
+    -fx-fill: #000000;
 
 }
 .report_container Label{
@@ -24,10 +32,8 @@
 }
 .report_container Button{
     -fx-pref-width:80;
-    -fx-background-color: #132A13;
-    -fx-fill; #FFFFFF;
+    -fx-background-color:#f5341b;
 }
 .report_container Button:hover{
     -fx-cursor:hand;
-
 }
