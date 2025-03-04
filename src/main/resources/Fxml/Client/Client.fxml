@@ -41,8 +41,8 @@
          </graphic>
       </Button>
       <AnchorPane layoutX="9.0" layoutY="277.0" prefHeight="87.0" prefWidth="170.0" styleClass="report_container">
-         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="report_container Text" text="Report Bug?" />
-         <Label layoutX="7.0" layoutY="38.0" styleClass="report_container Label" text="Use this to report any Error" />
+         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="report_container Text" text="Report Suggestion/Bug?" />
+         <Label layoutX="-7.0" layoutY="46.0" styleClass="report_container Label" text="Use this to report any Error" />
          <Button fx:id="report_btn" layoutX="14.0" layoutY="64.0" mnemonicParsing="false" styleClass="report_container Button" text="Report!">
             <graphic>
                <FontIcon iconLiteral="fa-plus" />
