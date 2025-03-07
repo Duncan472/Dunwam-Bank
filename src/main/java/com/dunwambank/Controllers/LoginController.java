@@ -52,6 +52,6 @@ public class LoginController  {
         window.close();
     }
     public void loginOnAction(){
-        System.out.println("login click")
+        System.out.println("login click");
             }
 }

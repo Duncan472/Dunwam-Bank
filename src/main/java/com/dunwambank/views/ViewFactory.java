@@ -31,7 +31,7 @@ public class ViewFactory {
         }catch (Exception e){
             e.printStackTrace();
         }
-    Stage stage -new Stage();
+    Stage stage=new Stage();
         stage.setScene(scene);
         stage.setTitle("Dunwam Bank");
         stage.show();
