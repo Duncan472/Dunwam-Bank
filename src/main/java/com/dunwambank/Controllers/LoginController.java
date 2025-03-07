@@ -50,5 +50,8 @@ public class LoginController  {
     public void cancelOnAction() {
         Stage window = (Stage) cancelButton.getScene().getWindow();
         window.close();
-
+    }
+    public void loginOnAction(){
+        System.out.println("login click")
+            }
 }
