@@ -14,15 +14,16 @@
    <children>
       <AnchorPane layoutX="236.0" prefHeight="400.0" prefWidth="364.0">
          <children>
-            <Button fx:id="cancelButton" layoutX="92.0" layoutY="280.0" mnemonicParsing="false" onAction="#cancelOnAction" styleClass="cancelButton" text="Cancel" />
+            <Button fx:id="cancelButton" layoutX="115.0" layoutY="268.0" mnemonicParsing="false" onAction="#cancelOnAction" styleClass="cancelButton" text="Cancel" />
             <Hyperlink fx:id="forgotPasswordHyperlink" layoutX="80.0" layoutY="332.0" text="Forgot Password" />
-            <Button fx:id="loginButton" layoutX="240.0" layoutY="280.0" mnemonicParsing="false" onAction="#loginOnAction" styleClass="loginButton" text="Login" />
+            <Button fx:id="loginButton" layoutX="232.0" layoutY="268.0" mnemonicParsing="false" onAction="#loginOnAction" styleClass="loginButton" text="Login" />
             <Hyperlink fx:id="helpHyperlink" layoutX="238.0" layoutY="333.0" text="Help" />
-            <Label layoutX="75.0" layoutY="135.0" text="Payee Address" />
-            <TextField fx:id="payeeAddressTextField" layoutX="204.0" layoutY="153.0" />
-            <Label layoutX="69.0" layoutY="208.0" text="Password" />
-            <PasswordField fx:id="passwordField" layoutX="205.0" layoutY="226.0" />
-            <ChoiceBox fx:id="choiceBoxAccount" layoutX="175.0" layoutY="81.0" prefWidth="150.0" />
+            <Label layoutX="75.0" layoutY="135.0" text="Payee Address:" />
+            <TextField fx:id="payeeAddressTextField" layoutX="166.0" layoutY="140.0" />
+            <Label layoutX="93.0" layoutY="208.0" text="Password:" />
+            <PasswordField fx:id="passwordField" layoutX="164.0" layoutY="204.0" />
+            <ChoiceBox fx:id="choiceBoxAccount" layoutX="166.0" layoutY="70.0" prefWidth="150.0" />
+            <Label layoutX="35.0" layoutY="74.0" text="Choose Your Account:" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="237.0" styleClass="login_logo_container">
@@ -34,6 +35,5 @@
             <Label layoutX="80.0" layoutY="226.0" styleClass="login_logo_container text" text="DunwamBank" />
          </children>
       </AnchorPane>
-      <Label layoutX="274.0" layoutY="59.0" text="Choose Your Account" />
    </children>
 </AnchorPane>
