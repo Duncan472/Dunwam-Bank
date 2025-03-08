@@ -8,7 +8,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-    public class DashboardController {
+    public class DashboardController{
 
         @FXML
         private TextField amount_fld;
