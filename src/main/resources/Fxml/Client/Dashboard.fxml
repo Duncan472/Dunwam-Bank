@@ -24,7 +24,7 @@
                   <Label fx:id="checking_bal" layoutX="23.0" layoutY="14.0" styleClass="account_balance" text="\$3500.00" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
                   <Label layoutX="17.0" layoutY="96.0" styleClass="account_number" text=".... .... ..." />
                   <Label fx:id="checking_acc_num" layoutX="134.0" layoutY="96.0" styleClass="account_number" text="45558" />
-                  <AnchorPane layoutX="224.0" layoutY="46.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="36.0" />
+                  <AnchorPane layoutX="231.0" layoutY="46.0" prefHeight="100.0" prefWidth="35.0" styleClass="account_anchorpane" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="29.0" />
                   <FontIcon iconLiteral="fa-bank" iconSize="40" layoutX="231.0" layoutY="39.28571319580078" wrappingWidth="35.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="5.0" />
                   <Text layoutX="13.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" />
                </children>
@@ -40,7 +40,7 @@
                         <Label fx:id="savings_bal" layoutX="23.0" layoutY="14.0" styleClass="account_balance" text="\$3500.00" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
                         <Label layoutX="17.0" layoutY="96.0" styleClass="account_number" text=".... .... ..." />
                         <Label fx:id="savings_acc_num" layoutX="134.0" layoutY="96.0" styleClass="account_number" text="45558" />
-                        <AnchorPane layoutX="224.0" layoutY="46.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="36.0" />
+                        <AnchorPane layoutX="237.0" layoutY="46.0" prefHeight="100.0" prefWidth="35.0" styleClass="account_anchorpane" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="23.0" />
                         <FontIcon iconLiteral="fa-bank" iconSize="40" layoutX="231.0" layoutY="39.28571319580078" wrappingWidth="35.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="5.0" />
                         <Text layoutX="13.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account" />
                      </children>
