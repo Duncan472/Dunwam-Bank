@@ -1,55 +1,39 @@
 package com.dunwambank.Controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
+import java.net.URL;
+import java.util.ResourceBundle;
+import com.dunwambank.Models.Models;
 
+public class LoginController implements Initializable {
 
-import java.util.Objects;
-
-public class LoginController  {
-
-    @FXML
-    public Hyperlink ForgotPasswordHyperlink;
-    @FXML
-    public Button loginButton;
-    @FXML
-    private Button cancelButton;
     @FXML
     public Hyperlink forgotPasswordHyperlink;
     @FXML
     public Hyperlink helpHyperlink;
     @FXML
+    public Button loginButton; // Fixed Button reference
+    @FXML
+    private Button cancelButton;
+    @FXML
     public TextField payeeAddressTextField;
     @FXML
     public PasswordField passwordField;
     @FXML
-    public ChoiceBox choiceBoxAccount;
+    public ChoiceBox<String> choiceBoxAccount;
     @FXML
     private ImageView loginImage;
 
-//    public ChoiceBox acc_selector;
-    public Label payee_address_lbl;
-    public TextField payee_address_fld;
-    public TextField password_fld;
-    public Button login_btn;
-    public Label error_lbl;
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loginButton.setOnAction(actionEvent -> Models.getInstance().getViewFactory().showClientWindow());
+    }
     @FXML
-    public void initialize() {
-        initializeUiElements();
-    }
-
-    private void initializeUiElements() {
-        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/icons8-bank-100.png")));
-        loginImage.setImage(image);
-    }
-
-    public void cancelOnAction() {
-        Stage window = (Stage) cancelButton.getScene().getWindow();
-        window.close();
+    private void cancelOnAction() {
+        System.out.println("Cancel button clicked");
     }
 
 }
