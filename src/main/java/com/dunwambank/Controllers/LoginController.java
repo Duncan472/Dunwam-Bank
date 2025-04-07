@@ -29,8 +29,14 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loginButton.setOnAction(actionEvent -> Models.getInstance().getViewFactory().showClientWindow());
+        loginButton.setOnAction(actionEvent -> onLogin());
     }
+    private void onLogin(){
+        Models.getInstance().getViewFactory().showClientWindow();
+    }
+
+
+}
     @FXML
     private void cancelOnAction() {
         System.out.println("Cancel button clicked");

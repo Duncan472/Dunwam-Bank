@@ -5,6 +5,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+//package com.dunwambank;
+//
+import javafx.stage.Stage;
+//
+//public class ViewFactory {
+//    public void showLoginWindow() {
+//        System.out.println("Showing Login Window...");
+//        // You should load your FXML here
+//    }
+//}
 
 public class ViewFactory {
     private AnchorPane dashboardView;
@@ -35,15 +45,10 @@ public class ViewFactory {
             e.printStackTrace();
         }
     }
-
-    public void showClientWindow() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/ClientMenu.fxml"));
-            ClientController clientController = new ClientController();
-            loader.setController(clientController);
-            createStage(loader);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public void showClientWindow(){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Login.fxml"));
+            ClientController clientController
         }
     }
 
@@ -57,5 +62,8 @@ public class ViewFactory {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void closeStage(Stage stage){
+        stage.close();
     }
 }

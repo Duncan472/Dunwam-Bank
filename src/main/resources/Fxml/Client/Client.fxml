@@ -8,8 +8,8 @@
 <?import javafx.scene.text.*?>
 <?import org.kordamp.ikonli.javafx.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="182.0" stylesheets="@../Styles/Client.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.ClientController">
-   <AnchorPane prefHeight="400.0" prefWidth="176.0" styleClass="main_menu_container">
+<AnchorPane prefHeight="400.0" prefWidth="182.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.ClientController">
+   <AnchorPane prefHeight="400.0" prefWidth="168.0" styleClass="main_menu_container">
       <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="32.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../Images/Home.png" />
       </ImageView>
