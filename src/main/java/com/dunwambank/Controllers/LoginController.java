@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import com.dunwambank.Models.Models;
+import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
 
@@ -36,7 +37,9 @@ public class LoginController implements Initializable {
         loginButton.setOnAction(actionEvent -> onLogin());
     }
     private void onLogin(){
+        Stage stage = (Stage)error_label.getScene().getWindow();
         Models.getInstance().getViewFactory().showClientWindow();
+        Models.getInstance().getViewFactory().closeStage(stage);
     }
 
 
