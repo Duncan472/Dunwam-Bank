@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
-import com.dunwambank.Models.Models;
+import com.dunwambank.Models.Model;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
@@ -36,18 +36,15 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loginButton.setOnAction(actionEvent -> onLogin());
     }
-    private void onLogin(){
-        Stage stage = (Stage)error_label.getScene().getWindow();
-        Models.getInstance().getViewFactory().showClientWindow();
-        Models.getInstance().getViewFactory().closeStage(stage);
+
+    private void onLogin() {
+        Stage stage = (Stage) error_label.getScene().getWindow();
+        Model.getInstance().getViewFactory().showClientWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
     }
 
-
-}
     @FXML
     private void cancelOnAction() {
         System.out.println("Cancel button clicked");
     }
-
-
 }

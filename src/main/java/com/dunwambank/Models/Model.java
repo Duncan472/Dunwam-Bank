@@ -2,18 +2,18 @@ package com.dunwambank.Models;
 
 import com.dunwambank.views.ViewFactory;
 
-public class Models {
+public class Model {
     // Singleton instance of Models
-    private static final Models instance = new Models();
+    private static final Model instance = new Model();
 
     // Shared instance of ViewFactory
     private final ViewFactory viewFactory = new ViewFactory();
 
     // Private constructor to prevent external instantiation
-    private Models() { }
+    private Model() { }
 
     // Accessor for the singleton instance
-    public static Models getInstance() {
+    public static Model getInstance() {
         return instance;
     }
 
