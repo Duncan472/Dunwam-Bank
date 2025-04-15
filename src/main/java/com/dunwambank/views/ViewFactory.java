@@ -8,16 +8,15 @@ import javafx.stage.Stage;
 //package com.dunwambank;
 //
 import javafx.stage.Stage;
-//
-//public class ViewFactory {
-//    public void showLoginWindow() {
-//        System.out.println("Showing Login Window...");
-//        // You should load your FXML here
-//    }
-//}
+
 
 public class ViewFactory {
+    //Client Views
     private AnchorPane dashboardView;
+    private AnchorPane transactionView;
+
+
+
 
     public ViewFactory() {}
 
@@ -31,6 +30,17 @@ public class ViewFactory {
             }
         }
         return dashboardView;
+    }
+
+    public AnchorPane getTransactionView() {
+        if (transactionView==null){
+            try {
+                transactionView=new FXMLLoader(getClass().getResource("/Fxml/Client/transaction.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return transactionView;
     }
 
     public void showLoginWindow() {
