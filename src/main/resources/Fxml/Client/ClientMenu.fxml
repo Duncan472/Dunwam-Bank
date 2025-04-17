@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane fx:id="client_parent" xmlns:fx="http://www.w3.org/2001/XInclude">
+<BorderPane fx:id="client_parent" xmlns:fx="http://www.w3.org/2001/XInclude"
+             xmlns:xmls="http://javafx.com.fxml">
     <left>
         <fx:include source="Client.fxml"/>
     </left>

@@ -1,7 +1,7 @@
 module com.dunwambank {
     requires javafx.controls;
-    requires javafx.fxml;
     requires javafx.graphics;
+    requires javafx.fxml;
 
     opens com.dunwambank.Controllers to javafx.fxml;
     opens com.dunwambank.Controllers.Client to javafx.fxml;
