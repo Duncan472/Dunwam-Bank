@@ -3,10 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.dunwambank.Controllers.ClientController">
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:id="client_parent" xmlns:fx="http://www.w3.org/2001/XInclude">
+    <left>
+        <fx:include source="Client.fxml"/>
+    </left>
 
-    <Button text="Cancel" onAction="#cancelOnAction"/>
+    <center>
+        <fx:include source="Dashboard.fxml"/>
+    </center>
 
-</AnchorPane>
+
+</BorderPane>
 
