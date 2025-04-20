@@ -1,9 +1,13 @@
 package com.dunwambank.Controllers.Client;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
-public class ClientController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ClientController implements Initializable {
     @FXML private Button account_btn;
     @FXML private Button dashboard_btn;
     @FXML private Button logout_btn;
@@ -12,4 +16,8 @@ public class ClientController {
     @FXML private Button transaction_btn;
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
