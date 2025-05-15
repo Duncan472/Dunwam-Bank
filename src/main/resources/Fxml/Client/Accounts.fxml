@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.AccountsController">
-
+<AnchorPane prefHeight="750.0" prefWidth="850.0" stylesheets="@../../Styles/Account.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.AccountsController">
+   <children>
+      <Text layoutX="26.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" wrappingWidth="105.13671875">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <VBox layoutX="14.0" layoutY="48.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
+            <Label text="347 286" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Limit" />
+            <Label text="200" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
+            <Label text="2025-05-26" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+            <Label text="\$300,000.00" />
+         </children>
+      </VBox>
+      <Text layoutX="37.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <VBox layoutX="26.0" layoutY="375.0" prefHeight="300.0" prefWidth="450.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
+            <Label text="347 286" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Withdrawal Limit" />
+            <Label text="\$40,000.00" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
+            <Label text="2025-05-26" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+            <Label text="\$1,300,000.00" />
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

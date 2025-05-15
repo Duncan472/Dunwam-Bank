@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a61694b5-f884-41b5-9ae0-0c966e42ddfe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/Client/AccountsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Accounts.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Account.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/Client/ClientMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/Client/ClientMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Accounts.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,6 @@
 package com.dunwambank.Controllers.Client;
 
+import com.dunwambank.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 
