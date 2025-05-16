@@ -2,20 +2,26 @@
 package com.dunwambank.Controllers.Client;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class AccountsController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class AccountsController implements Initializable {
+
+    @FXML
+    public Label checkingTransactionLimit_lbl;
+
+    @FXML
+    public TextField amountToCheckingTextField;
     @FXML
     private TextField amountToCheckigTextField;
 
     @FXML
     private TextField amountToSavingsTextField;
-
-    @FXML
-    private Label checkigTransactionLimit_lbl;
 
     @FXML
     private Label checkingAccountBalance_lbl;
@@ -43,6 +49,10 @@ public class AccountsController {
 
     @FXML
     private Label withdrawalLimit_lbl;
+
+
+    @Override
+    public void Initializable(URL url, ResourceBundle resourceBundle){}
 
 }
 

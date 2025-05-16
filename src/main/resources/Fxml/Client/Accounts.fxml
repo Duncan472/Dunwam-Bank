@@ -8,56 +8,49 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="accounts_view_container" stylesheets="@../../Styles/Account.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Client.AccountsController">
-   <children>
-      <Text layoutX="21.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" wrappingWidth="164.13671875">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Text>
-      <VBox layoutX="14.0" layoutY="48.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="48.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
-            <Label fx:id="checkingAccountNumber_lbl" text="347 286" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Limit" />
-            <Label fx:id="checkigTransactionLimit_lbl" text="200" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
-            <Label fx:id="checkingDateCreated_lbl" text="2025-05-26" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
-            <Label fx:id="checkingAccountBalance_lbl" text="\$300,000.00" />
-         </children>
-      </VBox>
-      <Text layoutX="37.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Text>
-      <VBox layoutX="26.0" layoutY="375.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
-            <Label fx:id="savingsAccountNumber_lbl" text="347 286" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Withdrawal Limit" />
-            <Label fx:id="withdrawalLimit_lbl" text="\$40,000.00" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
-            <Label fx:id="dateCreated_label" text="2025-05-26" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
-            <Label fx:id="savingsBalance_lbl" text="\$1,300,000.00" />
-         </children>
-      </VBox>
-      <Text layoutX="614.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds To savings Account" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="40.0" />
-      <TextField fx:id="amountToSavingsTextField" layoutX="471.0" layoutY="68.0" prefHeight="25.0" prefWidth="214.0" promptText="\$156,157" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="72.0" />
-      <Button fx:id="transferToSavings_btn" layoutX="486.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Transfer" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="119.0">
-         <font>
-            <Font name="System Italic" size="14.0" />
-         </font>
-      </Button>
-      <Text layoutX="479.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds To savings Account" AnchorPane.rightAnchor="165.0" />
-      <TextField fx:id="amountToCheckigTextField" layoutX="471.0" layoutY="375.0" prefHeight="25.0" prefWidth="214.0" promptText="\$156,157" AnchorPane.rightAnchor="157.0" />
-      <Button fx:id="transferToChecking_btn" layoutX="443.0" layoutY="422.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Transfer" AnchorPane.rightAnchor="157.0">
-         <font>
-            <Font name="System Italic" size="14.0" />
-         </font>
-      </Button>
-   </children>
+   <Text layoutX="21.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" wrappingWidth="164.13671875">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font>
+   </Text>
+   <VBox layoutX="14.0" layoutY="48.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="48.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
+      <Label fx:id="checkingAccountNumber_lbl" text="347 286" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Limit" />
+      <Label fx:id="checkingTransactionLimit_lbl" text="200" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
+      <Label fx:id="checkingDateCreated_lbl" text="2025-05-26" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+      <Label fx:id="checkingAccountBalance_lbl" text="\$300,000.00" />
+   </VBox>
+   <Text layoutX="37.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font>
+   </Text>
+   <VBox layoutX="26.0" layoutY="375.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
+      <Label fx:id="savingsAccountNumber_lbl" text="347 286" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Withdrawal Limit" />
+      <Label fx:id="withdrawalLimit_lbl" text="\$40,000.00" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
+      <Label fx:id="dateCreated_label" text="2025-05-26" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+      <Label fx:id="savingsBalance_lbl" text="\$1,300,000.00" />
+   </VBox>
+   <Text layoutX="614.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds To savings Account" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="40.0" />
+   <TextField fx:id="amountToSavingsTextField" layoutX="471.0" layoutY="68.0" prefHeight="25.0" prefWidth="214.0" promptText="\$156,157" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="72.0" />
+   <Button fx:id="transferToSavings_btn" layoutX="486.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Transfer" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="119.0">
+      <font>
+         <Font name="System Italic" size="14.0" />
+      </font>
+   </Button>
+   <Text layoutX="479.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds To savings Account" AnchorPane.rightAnchor="165.0" />
+   <TextField fx:id="amountToCheckingTextField" layoutX="471.0" layoutY="375.0" prefHeight="25.0" prefWidth="214.0" promptText="\$156,157" AnchorPane.rightAnchor="157.0" />
+   <Button fx:id="transferToChecking_btn" layoutX="443.0" layoutY="422.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Transfer" AnchorPane.rightAnchor="157.0">
+      <font>
+         <Font name="System Italic" size="14.0" />
+      </font>
+   </Button>
 </AnchorPane>
