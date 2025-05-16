@@ -14,16 +14,17 @@ public class ClientMenuController  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Model.getInstance().getViewFactory().getClientSelectedMenuItem().addListener((observableValue, oldVal, newVal) -> {
-            switch (newVal) {
-                case "Transactions":
-                    client_parent.setCenter(
-                            Model.getInstance().getViewFactory().getTransactionView()
-                    );
-                    break;
-                // Add more cases here if needed
-            }
-        });
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().addListener(
+                (observableValue, oldVal, newVal) -> {
+                    switch (newVal) {
+                        case "Transactions" -> client_parent.setCenter(
+                                Model.getInstance().getViewFactory().getTransactionView()
+                        );
+                        // Add more cases here if needed
+                    }
+                }
+        );
+
     }
 
 }

@@ -1,5 +1,6 @@
 package com.dunwambank.views;
 
+import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +19,9 @@ public class ViewFactory {
 
     public ViewFactory() {
         this.clientSelecteMenuItem = new SimpleStringProperty(" ");
+    }
+
+    public Observable getClientSelectedMenuItem() {
     }
 
     public StringProperty getClientSelecteMenuItem(){

@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AccountsController implements Initializable {
+public class AccountsController {
 
     @FXML
     public Label checkingTransactionLimit_lbl;
@@ -49,10 +49,6 @@ public class AccountsController implements Initializable {
 
     @FXML
     private Label withdrawalLimit_lbl;
-
-
-    @Override
-    public void Initializable(URL url, ResourceBundle resourceBundle){}
 
 }
 
