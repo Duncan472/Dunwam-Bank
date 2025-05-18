@@ -21,6 +21,8 @@ public class ViewFactory {
         this.clientSelecteMenuItem = new SimpleStringProperty(" ");
     }
 
+//    Client View Sections
+
     public Observable getClientSelectedMenuItem() {
     }
 
@@ -60,6 +62,8 @@ public class ViewFactory {
         }
         return accountsView;
     }
+
+//    Admin Section
     public void showLoginWindow() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
