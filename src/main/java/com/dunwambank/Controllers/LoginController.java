@@ -38,10 +38,10 @@ public class LoginController implements Initializable {
     }
 
     private void onLogin() {
-        Stage stage = (Stage) error_label.getScene().getWindow();
+        Stage stage = (stage) error_lbl.getScene().getWindow();
         Model.getInstance().getViewFactory().showClientWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
     }
+
 
     @FXML
     private void cancelOnAction() {

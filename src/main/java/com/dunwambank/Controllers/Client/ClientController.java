@@ -24,7 +24,7 @@ public class ClientController implements Initializable {
     }
 
     private void addListeners() {
-        dashboard_btn.setOnAction(actionEvent -> onDashboard();)
+        dashboard_btn.setOnAction(actionEvent -> onDashboard());
         transaction_btn.setOnAction(actionEvent -> onTransactions());
 }
 
