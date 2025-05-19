@@ -22,11 +22,9 @@ public class ViewFactory {
     }
 
 //    Client View Sections
+    private StringProperty clientSelectedMenuItem = new SimpleStringProperty("Dashboard");
+    public StringProperty getClientSelectedMenuItem() {
 
-    public Observable getClientSelectedMenuItem() {
-    }
-
-    public StringProperty getClientSelecteMenuItem(){
         return clientSelecteMenuItem;
     }
 
@@ -103,4 +101,7 @@ public class ViewFactory {
     }
 
 
+    public void setClientSelectedMenuItem(String clientSelectedMenuItem) {
+        this.clientSelectedMenuItem.set(clientSelectedMenuItem);
+    }
 }
