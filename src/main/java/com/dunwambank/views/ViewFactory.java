@@ -77,8 +77,12 @@ public class ViewFactory {
 
     public void showClientWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
             Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }

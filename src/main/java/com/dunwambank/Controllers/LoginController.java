@@ -1,5 +1,6 @@
 package com.dunwambank.Controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -47,4 +48,10 @@ public class LoginController implements Initializable {
     private void cancelOnAction() {
         System.out.println("Cancel button clicked");
     }
+    @FXML
+    private void loginOnAction(ActionEvent event) {
+        // your code here
+    }
+
+
 }

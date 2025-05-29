@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class AccountsController  implements Initializable{
+public abstract class AccountsController  implements Initializable{
 
     @FXML
     public Label checkingTransactionLimit_lbl;
@@ -50,11 +50,11 @@ public class AccountsController  implements Initializable{
 
     @FXML
     private Label withdrawalLimit_lbl;
-
-        @Override
-    public void initializable(URL url, ResourceBundle resourceBundle){
-
-        }
+//
+//        @Override
+//    public void initializable(URL url, ResourceBundle resourceBundle){
+//
+//        }
 
 
 }
