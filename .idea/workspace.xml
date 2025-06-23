@@ -7,8 +7,6 @@
     <list default="true" id="a61694b5-f884-41b5-9ae0-0c966e42ddfe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/Admin/AdminMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/Admin/AdminMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/AdminMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/AdminMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Client.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +87,7 @@
       <recent name="C:\Users\ADMIN\OneDrive\Desktop\Projects\Dunwam Bank\src\main\java\com\dunwambank" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.dunwambank.Controllers.Admin" />
       <recent name="com.dunwambank.Controllers.Client" />
     </key>
   </component>

@@ -21,7 +21,7 @@ public class AdminMenuController {
     private Button logoutButton;
 
 
-//    @Override
-//    public void initializable(URL url, ResourceBundle resourceBundle){}
+    @Override
+    public void initializable(URL url, ResourceBundle resourceBundle){}
 
 }
