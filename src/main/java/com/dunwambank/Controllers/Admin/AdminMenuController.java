@@ -1,12 +1,13 @@
 package com.dunwambank.Controllers.Admin;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AdminMenuController {
+public class AdminMenuController implements Initializable {
 
     @FXML
     private Button DepositButton;
@@ -22,6 +23,6 @@ public class AdminMenuController {
 
 
     @Override
-    public void initializable(URL url, ResourceBundle resourceBundle){}
+    public void initialize(URL url, ResourceBundle resourceBundle){}
 
 }

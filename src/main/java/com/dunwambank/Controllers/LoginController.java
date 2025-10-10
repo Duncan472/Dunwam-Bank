@@ -35,23 +35,17 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loginButton.setOnAction(actionEvent -> onLogin());
+        loginButton.setOnAction(actionEvent -> loginOnAction());
     }
-
-    private void onLogin() {
-        Stage stage = (Stage) loginButton.getScene().getWindow();
-        Model.getInstance().getViewFactory().showClientWindow();
-    }
-
 
     @FXML
     private void cancelOnAction() {
-        System.out.println("Cancel button clicked");
-    }
-    @FXML
-    private void loginOnAction(ActionEvent event) {
-        // your code here
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 
-
+    public void loginOnAction() {
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().showClientWindow();
+    }
 }

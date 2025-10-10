@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.layout.BorderPane?>
-<BorderPane fx:id="client_parent" xmlns:fx="http://www.w3.org/2001/XInclude"
-             xmlns:xmls="http://javafx.com.fxml">
+<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.dunwambank.Controllers.Client.DashboardController">
+
+    <!-- Sidebar menu (Client.fxml) -->
     <left>
         <fx:include source="Client.fxml"/>
     </left>
 
+    <!-- Dashboard area (Dashboard.fxml) -->
     <center>
         <fx:include source="Dashboard.fxml"/>
     </center>
 
-
 </BorderPane>
-
