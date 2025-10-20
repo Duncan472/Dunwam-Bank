@@ -1,5 +1,6 @@
 package com.dunwambank.views;
 
+import com.dunwambank.Controllers.Admin.AdminController;
 import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -11,21 +12,24 @@ import javafx.stage.Stage;
 
 public class ViewFactory {
     //Client Views
-    private final StringProperty clientSelecteMenuItem;
+    private final StringProperty clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionView;
     private AnchorPane accountsView;
 
+    //Admin Views
+    private final  StringProperty adminSelectedMenuItem;
+    private AnchorPane createClientView;
 
     public ViewFactory() {
-        this.clientSelecteMenuItem = new SimpleStringProperty(" ");
+        this.adminSelectedMenuItem = new SimpleStringProperty("Dashboard");
     }
 
 //    Client View Sections
-    private StringProperty clientSelectedMenuItem = new SimpleStringProperty("Dashboard");
+
     public StringProperty getClientSelectedMenuItem() {
 
-        return clientSelecteMenuItem;
+        return clientSelectedMenuItem;
     }
 
     public AnchorPane getDashboardView() {
@@ -86,6 +90,28 @@ public class ViewFactory {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public StringProperty getAdminSelectedMenuItem(){
+        return adminSelectedMenuItem;
+    }
+
+    public AnchorPane getCreateClientView() {
+        if (createClientView== null){
+            try{
+                createClientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/CreateClient.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return createClientView;
+    }
+
+    public void showAdminWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
+        AdminController controller = new AdminController();
+        loader.setController(controller);
+        createStage(loader);
+
     }
 
 

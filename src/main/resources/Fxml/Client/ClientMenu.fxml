@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+<BorderPane fx:id="client_parent" xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/21"
             fx:controller="com.dunwambank.Controllers.Client.DashboardController">
 
