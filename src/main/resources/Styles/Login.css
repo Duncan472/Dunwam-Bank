@@ -17,6 +17,7 @@
 /* Account Selector ChoiceBox style */
 .account_selector .choice-box{ /* Changed 'ChoiceBox' to 'choice-box' */
     -fx-background-color: #ECF39E;
+    -fx-font-size: 1.1em;
 }
 .account_selector .label{
     -fx-text-fill: #132A13;

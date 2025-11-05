@@ -20,10 +20,10 @@ public class ViewFactory {
     //Admin Views
     private final  StringProperty adminSelectedMenuItem;
     private AnchorPane createClientView;
-
-    public ViewFactory() {
-        this.adminSelectedMenuItem = new SimpleStringProperty("Dashboard");
-    }
+//
+//    public ViewFactory() {
+//        this.adminSelectedMenuItem = new SimpleStringProperty("Dashboard");
+//    }
 
 //    Client View Sections
 
