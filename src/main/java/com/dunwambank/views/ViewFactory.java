@@ -1,7 +1,7 @@
+// java
 package com.dunwambank.views;
 
 import com.dunwambank.Controllers.Admin.AdminController;
-import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
@@ -11,24 +11,24 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ViewFactory {
-    //Client Views
+    // Client Views
     private final StringProperty clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionView;
     private AnchorPane accountsView;
 
-    //Admin Views
-    private final  StringProperty adminSelectedMenuItem;
+    // Admin Views
+    private final StringProperty adminSelectedMenuItem;
     private AnchorPane createClientView;
-//
-//    public ViewFactory() {
-//        this.adminSelectedMenuItem = new SimpleStringProperty("Dashboard");
-//    }
 
-//    Client View Sections
+    // Constructor initializes final properties
+    public ViewFactory() {
+        this.clientSelectedMenuItem = new SimpleStringProperty("Dashboard");
+        this.adminSelectedMenuItem = new SimpleStringProperty("Dashboard");
+    }
 
+    // Client View Sections
     public StringProperty getClientSelectedMenuItem() {
-
         return clientSelectedMenuItem;
     }
 
@@ -45,27 +45,28 @@ public class ViewFactory {
     }
 
     public AnchorPane getTransactionView() {
-        if (transactionView==null){
+        if (transactionView == null) {
             try {
-                transactionView=new FXMLLoader(getClass().getResource("/Fxml/Client/transaction.fxml")).load();
-            }catch (Exception e){
+                transactionView = new FXMLLoader(getClass().getResource("/Fxml/Client/transaction.fxml")).load();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         return transactionView;
     }
-    public AnchorPane getAccountsView(){
-        if (accountsView==null){
-            try{
-                accountsView  = new FXMLLoader(getClass().getResource("/Fxml/Client/Accounts.fxml")).load();
-            }catch (Exception e){
+
+    public AnchorPane getAccountsView() {
+        if (accountsView == null) {
+            try {
+                accountsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Accounts.fxml")).load();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         return accountsView;
     }
 
-//    Admin Section
+    // Admin Section
     public void showLoginWindow() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
@@ -91,29 +92,28 @@ public class ViewFactory {
             e.printStackTrace();
         }
     }
-    public StringProperty getAdminSelectedMenuItem(){
+
+    public StringProperty getAdminSelectedMenuItem() {
         return adminSelectedMenuItem;
     }
 
     public AnchorPane getCreateClientView() {
-        if (createClientView== null){
-            try{
+        if (createClientView == null) {
+            try {
                 createClientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/CreateClient.fxml")).load();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         return createClientView;
     }
 
-    public void showAdminWindow(){
+    public void showAdminWindow() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
         AdminController controller = new AdminController();
         loader.setController(controller);
         createStage(loader);
-
     }
-
 
     private void createStage(FXMLLoader loader) {
         try {
@@ -126,10 +126,10 @@ public class ViewFactory {
             e.printStackTrace();
         }
     }
-    public void closeStage(Stage stage){
+
+    public void closeStage(Stage stage) {
         stage.close();
     }
-
 
     public void setClientSelectedMenuItem(String clientSelectedMenuItem) {
         this.clientSelectedMenuItem.set(clientSelectedMenuItem);
