@@ -31,7 +31,7 @@ public class LoginController implements Initializable {
     @FXML
     public ChoiceBox<String> choiceBoxAccount;
     @FXML
-    private ImageView loginImage;
+    public ImageView loginImage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
