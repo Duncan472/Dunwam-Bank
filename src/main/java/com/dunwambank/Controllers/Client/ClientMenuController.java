@@ -6,6 +6,9 @@ import javafx.scene.layout.BorderPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.dunwambank.views.ClientMenuOptions.ACCOUNTS;
+import static com.dunwambank.views.ClientMenuOptions.TRANSACTIONS;
+
 
 public class ClientMenuController  implements Initializable {
 
@@ -16,11 +19,11 @@ public class ClientMenuController  implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().addListener(
                 observable -> {
-                    String newVal = Model.getInstance().getViewFactory().getClientSelectedMenuItem().get();
+                   Model.getInstance().getViewFactory().getClientSelectedMenuItem().addListener((observable1, oldVal, newVal) -> {
                     switch (newVal) {
-                        case "Transactions" ->
+                        case TRANSACTIONS ->
                                 client_parent.setCenter(Model.getInstance().getViewFactory().getTransactionView());
-                        case "Accounts" ->
+                        case ACCOUNTS ->
                                 client_parent.setCenter(Model.getInstance().getViewFactory().getAccountsView());
                         default ->
                                 client_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());
@@ -29,6 +32,7 @@ public class ClientMenuController  implements Initializable {
         );
 
 
+                }
+        );
     }
-
-}
+    }

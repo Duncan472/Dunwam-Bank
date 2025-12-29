@@ -2,6 +2,8 @@
 package com.dunwambank.views;
 
 import com.dunwambank.Controllers.Admin.AdminController;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +14,7 @@ import javafx.stage.Stage;
 
 public class   ViewFactory {
     // Client Views
-    private final StringProperty clientSelectedMenuItem;
+    private final ObjectProperty<ClientMenuOptions> clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionView;
     private AnchorPane accountsView;
@@ -24,13 +26,13 @@ public class   ViewFactory {
 
     // Constructor initializes final properties
     public ViewFactory() {
-        this.clientSelectedMenuItem = new SimpleStringProperty("Dashboard");
-        this.adminSelectedMenuItem = new SimpleStringProperty("Dashboard");
+        this.clientSelectedMenuItem = new SimpleObjectProperty<>(ClientMenuOptions.DASHBOARD);
+        this.adminSelectedMenuItem = new SimpleStringProperty("");
 
     }
 
     // Client View Sections
-    public StringProperty getClientSelectedMenuItem() {
+    public ObjectProperty<ClientMenuOptions> getClientSelectedMenuItem() {
         return clientSelectedMenuItem;
     }
 
@@ -104,7 +106,7 @@ public class   ViewFactory {
 
     public void showClientWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/ClientMenu.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -143,6 +145,6 @@ public class   ViewFactory {
     }
 
     public void setClientSelectedMenuItem(String clientSelectedMenuItem) {
-        this.clientSelectedMenuItem.set(clientSelectedMenuItem);
+        this.clientSelectedMenuItem.set(ClientMenuOptions.valueOf(clientSelectedMenuItem));
     }
 }
