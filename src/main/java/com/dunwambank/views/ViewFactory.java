@@ -20,15 +20,23 @@ public class   ViewFactory {
     private AnchorPane accountsView;
 
     // Admin Views
+    private final ObjectProperty<AdminMenuOptions>adminSelectedMenuOption;
     private final StringProperty adminSelectedMenuItem;
     private AnchorPane createClientView;
 
 
     // Constructor initializes final properties
-    public ViewFactory() {
-        this.clientSelectedMenuItem = new SimpleObjectProperty<>(ClientMenuOptions.DASHBOARD);
+    public ViewFactory(ObjectProperty<AdminMenuOptions> adminSelectedMenuOption, ObjectProperty<AdminMenuOptions> adminSelectedMenuOption1) {
+        this.adminSelectedMenuOption = adminSelectedMenuOption1;
+        this.clientSelectedMenuItem = new SimpleObjectProperty<>();
         this.adminSelectedMenuItem = new SimpleStringProperty("");
 
+    }
+
+    public ViewFactory() {
+        this.clientSelectedMenuItem = new SimpleObjectProperty<>();
+        this.adminSelectedMenuOption = new SimpleObjectProperty<>();
+        this.adminSelectedMenuItem = new SimpleStringProperty("");
     }
 
     // Client View Sections
