@@ -1,12 +1,15 @@
 package com.dunwambank.Controllers.Admin;
 
 import com.dunwambank.Models.Model;
+import com.dunwambank.views.AdminMenuOptions;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static com.dunwambank.views.AdminMenuOptions.*;
 
 public class AdminMenuController implements Initializable {
 
@@ -32,7 +35,7 @@ public class AdminMenuController implements Initializable {
 
     }
     private void  onCreateClient(){
-        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set("CreateClient");
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(String.valueOf(CREATE_CLIENT));
     }
 
 }

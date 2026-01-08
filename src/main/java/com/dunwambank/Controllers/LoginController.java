@@ -1,18 +1,16 @@
 package com.dunwambank.Controllers;
 
+import com.dunwambank.views.AccountType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import com.dunwambank.Models.Model;
 import javafx.stage.Stage;
+import javafx.collections.FXCollections;
 
 public class LoginController implements Initializable {
 
@@ -29,13 +27,23 @@ public class LoginController implements Initializable {
     @FXML
     public PasswordField passwordField;
     @FXML
-    public ChoiceBox<String> choiceBoxAccount;
+    public ChoiceBox<AccountType> choiceBoxAccount;
     @FXML
     public ImageView loginImage;
+    @FXML
+    private ComboBox<AccountType> acc_selector;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loginButton.setOnAction(actionEvent -> loginOnAction());
+        choiceBoxAccount.setItems(
+                FXCollections.observableArrayList(
+                        AccountType.ADMIN,
+                        AccountType.CLIENT
+                )
+        );
+
+        loginButton.setOnAction(e -> loginOnAction());
     }
 
     @FXML

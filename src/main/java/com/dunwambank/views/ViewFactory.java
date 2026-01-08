@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class   ViewFactory {
+    private AccountType loginAccountType;
+
     // Client Views
     private final ObjectProperty<ClientMenuOptions> clientSelectedMenuItem;
     private AnchorPane dashboardView;
@@ -33,7 +35,16 @@ public class   ViewFactory {
 
     }
 
+    public AccountType getLoginAccountType() {
+        return loginAccountType;
+    }
+
+    public void setLoginAccountType(AccountType loginAccountType) {
+        this.loginAccountType = loginAccountType;
+    }
+
     public ViewFactory() {
+        this.loginAccountType= AccountType.CLIENT;
         this.clientSelectedMenuItem = new SimpleObjectProperty<>();
         this.adminSelectedMenuOption = new SimpleObjectProperty<>();
         this.adminSelectedMenuItem = new SimpleStringProperty("");
