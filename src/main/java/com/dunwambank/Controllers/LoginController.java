@@ -1,7 +1,6 @@
 package com.dunwambank.Controllers;
 
 import com.dunwambank.views.AccountType;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -30,9 +29,6 @@ public class LoginController implements Initializable {
     public ChoiceBox<AccountType> choiceBoxAccount;
     @FXML
     public ImageView loginImage;
-    @FXML
-    private ComboBox<AccountType> acc_selector;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
