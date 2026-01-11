@@ -52,5 +52,11 @@ public class LoginController implements Initializable {
         Stage stage = (Stage) loginButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showClientWindow();
+
+        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.ADMIN) {
+            Model.getInstance().getViewFactory().showAdminWindow();
+        } else {
+            Model.getInstance().getViewFactory().showClientWindow();
+        }
     }
 }
