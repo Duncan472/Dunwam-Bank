@@ -7,6 +7,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -25,6 +26,7 @@ public class   ViewFactory {
     private final ObjectProperty<AdminMenuOptions>adminSelectedMenuOption;
     private final StringProperty adminSelectedMenuItem;
     private AnchorPane createClientView;
+    private AnchorPane clientsView;
 
 
     // Constructor initializes final properties
@@ -147,6 +149,17 @@ public class   ViewFactory {
         return createClientView;
     }
 
+    public AnchorPane getClientsView() {
+        if (clientsView == null) {
+            try {
+                clientsView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Clients.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return clientsView;
+    }
+
     private void createStage(FXMLLoader loader) {
         try {
             Scene scene = new Scene(loader.load());
@@ -166,4 +179,5 @@ public class   ViewFactory {
     public void setClientSelectedMenuItem(String clientSelectedMenuItem) {
         this.clientSelectedMenuItem.set(ClientMenuOptions.valueOf(clientSelectedMenuItem));
     }
+
 }
