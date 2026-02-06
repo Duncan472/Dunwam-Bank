@@ -1,37 +1,30 @@
 package com.dunwambank.Controllers;
 
+import com.dunwambank.Models.Model;
 import com.dunwambank.views.AccountType;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
 import java.net.URL;
 import java.util.ResourceBundle;
-import com.dunwambank.Models.Model;
-import javafx.stage.Stage;
-import javafx.collections.FXCollections;
 
 public class LoginController implements Initializable {
 
     @FXML
-    public Hyperlink forgotPasswordHyperlink;
-    @FXML
-    public Hyperlink helpHyperlink;
-    @FXML
-    public Button loginButton; // Fixed Button reference
+    private Button loginButton;
+
     @FXML
     private Button cancelButton;
+
     @FXML
-    public TextField payeeAddressTextField;
-    @FXML
-    public PasswordField passwordField;
-    @FXML
-    public ChoiceBox<AccountType> choiceBoxAccount;
-    @FXML
-    public ImageView loginImage;
+    private ChoiceBox<AccountType> choiceBoxAccount;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         choiceBoxAccount.setItems(
                 FXCollections.observableArrayList(
                         AccountType.ADMIN,
@@ -39,7 +32,30 @@ public class LoginController implements Initializable {
                 )
         );
 
-        loginButton.setOnAction(e -> loginOnAction());
+        choiceBoxAccount.setValue(AccountType.CLIENT);
+    }
+
+    @FXML
+    private void loginOnAction() {
+
+        AccountType selected = choiceBoxAccount.getValue();
+
+        if (selected == null) {
+            return;
+        }
+
+        Model.getInstance()
+                .getViewFactory()
+                .setLoginAccountType(selected);
+
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+
+        if (selected == AccountType.ADMIN) {
+            Model.getInstance().getViewFactory().showAdminWindow();
+        } else {
+            Model.getInstance().getViewFactory().showClientWindow();
+        }
     }
 
     @FXML
@@ -47,16 +63,4 @@ public class LoginController implements Initializable {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
-
-    public void loginOnAction() {
-        Stage stage = (Stage) loginButton.getScene().getWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
-
-        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.CLIENT) {
-            Model.getInstance().getViewFactory().showClientWindow();
-        } else {
-            Model.getInstance().getViewFactory().showAdminWindow();
-        }
-    }
-
 }

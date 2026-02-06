@@ -9,12 +9,10 @@ import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.dunwambank.views.AdminMenuOptions.*;
-
 public class AdminMenuController implements Initializable {
 
     @FXML
-    private Button DepositButton;
+    private Button depositButton;
 
     @FXML
     private Button clientsButton;
@@ -25,17 +23,28 @@ public class AdminMenuController implements Initializable {
     @FXML
     private Button logoutButton;
 
-
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         addListeners();
     }
 
-    private void addListeners(){
-
+    private void addListeners() {
+        createClientButton.setOnAction(e -> onCreateClient());
+        clientsButton.setOnAction(e -> onClients());
+        // logoutButton.setOnAction(e -> onLogout()); // optional
     }
-    private void  onCreateClient(){
-        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(String.valueOf(AdminMenuOptions.CREATE_CLIENT));
+
+    private void onCreateClient() {
+        Model.getInstance()
+                .getViewFactory()
+                .getAdminSelectedMenuItem()
+                .set(AdminMenuOptions.CREATE_CLIENT);
     }
 
+    private void onClients() {
+        Model.getInstance()
+                .getViewFactory()
+                .getAdminSelectedMenuItem()
+                .set(AdminMenuOptions.CLIENTS);
+    }
 }
