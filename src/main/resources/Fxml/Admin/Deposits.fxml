@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
@@ -7,6 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 
 <AnchorPane prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.Admin.DepositsController">
@@ -17,7 +19,11 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Payee Address:" />
                   <TextField />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button">
+                     <graphic>
+                        <FontAwesomeIconView iconLiteral="antf-credit-card" />
+                     </graphic>
+                  </Button>
                </children>
             </HBox>
             <ListView prefHeight="200.0" prefWidth="820.0" />
@@ -25,7 +31,12 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit Section" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" />
-                  <TextField />
+                  <TextField prefHeight="25.0" prefWidth="518.0" VBox.vgrow="SOMETIMES" />
+                  <Button mnemonicParsing="false" text="Deposit">
+                     <graphic>
+                        <FontIcon iconColor="#e82c2c" iconLiteral="typ-news" iconSize="10" />
+                     </graphic>
+                  </Button>
                </children>
             </VBox>
          </children>

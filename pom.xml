@@ -54,6 +54,7 @@
         </dependency>
 
 
+
             <!-- Ikonli Core -->
             <dependency>
                 <groupId>org.kordamp.ikonli</groupId>
