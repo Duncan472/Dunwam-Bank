@@ -19,11 +19,7 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Payee Address:" />
                   <TextField />
-                  <Button mnemonicParsing="false" text="Button">
-                     <graphic>
-                        <FontAwesomeIconView iconLiteral="antf-credit-card" />
-                     </graphic>
-                  </Button>
+                  <Button mnemonicParsing="false" text="Button"></Button>
                </children>
             </HBox>
             <ListView prefHeight="200.0" prefWidth="820.0" />
