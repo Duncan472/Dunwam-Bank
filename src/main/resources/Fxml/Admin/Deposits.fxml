@@ -29,9 +29,6 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" />
                   <TextField prefHeight="25.0" prefWidth="518.0" VBox.vgrow="SOMETIMES" />
                   <Button mnemonicParsing="false" text="Deposit">
-                     <graphic>
-                        <FontIcon iconColor="#e82c2c" iconLiteral="typ-news" iconSize="10" />
-                     </graphic>
                   </Button>
                </children>
             </VBox>

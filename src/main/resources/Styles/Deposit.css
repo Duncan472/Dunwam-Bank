@@ -1,0 +1,75 @@
+.deposit_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    -fx-background-color: #EEEEEE;
+}
+.search_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    -fx-border-width: 0 0 1 0;
+    spacing: 10px;
+    border-color: #AAAAAA;
+}
+Text {
+    margin-right: 10px;
+    font-size: 1.6em;
+    font-family: "Calibri Light";
+}
+TextField {
+    -fx-pref-width: 200px;
+    -fx-padding: 5px;
+    -fx-border-width: 1;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 5px;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+Button {
+    -fx-font-size: 1.6em;
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+    -fx-text-fill: white;
+    -fx-border-width: 200;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 5, 0, 0, 1);
+}
+Button:hover {
+   -fx-cursor: hand;}
+
+ .results_box{
+    -fx-spacing:15px;
+ }
+.result_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 1;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+.result_item Text {
+    font-size: 1.4em;}
+.result_box .list-view {
+    -fx-pref-width: 200px;
+    -fx-padding: 5px;
+    -fx-border-width: 1;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 5px;
+    -fx-background-color: #EEEEEE;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+.list-cell {
+    -fx-background-color: #EEEEEE;
+    -fx-padding:20 0 20 0;
+}
+
+
+
