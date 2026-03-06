@@ -15,31 +15,24 @@ public class LoginController implements Initializable {
 
     @FXML
     private Button loginButton;
-
     @FXML
     private Button cancelButton;
-
     @FXML
     private ChoiceBox<AccountType> choiceBoxAccount;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         choiceBoxAccount.setItems(
                 FXCollections.observableArrayList(
                         AccountType.ADMIN,
                         AccountType.CLIENT
                 )
         );
-
         choiceBoxAccount.setValue(AccountType.CLIENT);
     }
-
     @FXML
     private void loginOnAction() {
-
         AccountType selected = choiceBoxAccount.getValue();
-
         if (selected == null) {
             return;
         }
