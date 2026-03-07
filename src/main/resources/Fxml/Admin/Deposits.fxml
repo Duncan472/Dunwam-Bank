@@ -15,17 +15,17 @@
             <HBox alignment="CENTER" prefHeight="60.0" prefWidth="820.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Payee Address:" />
-                  <TextField styleClass="search_box" />
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="119.0" text="Search" />
+                  <TextField fx:id="payeeAddress_field" styleClass="search_box" />
+                  <Button fx:id="search_button" mnemonicParsing="false" prefHeight="40.0" prefWidth="119.0" text="Search" />
                </children>
             </HBox>
-            <ListView prefHeight="200.0" prefWidth="820.0" styleClass="results_box" />
+            <ListView fx:id="resultsListview" prefHeight="200.0" prefWidth="820.0" styleClass="results_box" />
             <VBox alignment="TOP_CENTER" prefHeight="315.0" prefWidth="100.0" styleClass="deposit_container">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit Section" wrappingWidth="83.115234375" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" wrappingWidth="42.755859375" />
-                  <TextField prefHeight="25.0" prefWidth="518.0" VBox.vgrow="SOMETIMES" />
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" text="Deposit">
+                  <TextField fx:id="amount_field" prefHeight="25.0" prefWidth="518.0" VBox.vgrow="SOMETIMES" />
+                  <Button fx:id="deposit_button" mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" text="Deposit">
                   </Button>
                </children>
             </VBox>
