@@ -14,6 +14,20 @@ import javafx.stage.Stage;
  */
 public class ViewFactory {
 
+    public AnchorPane getAdminView(AdminMenuOptions option) {
+        switch (option) {
+            case CREATE_CLIENT:
+                return getCreateClientView();
+            case CLIENTS:
+                return getClientsView();
+            case DEPOSITS:
+                return getDepositsView();
+            default:
+                return getClientsView();
+        }
+    }
+
+
     // ---------------- STATE ----------------
 
     private AccountType loginAccountType = AccountType.CLIENT;
@@ -34,6 +48,7 @@ public class ViewFactory {
 
     private AnchorPane createClientView;
     private AnchorPane clientsView;
+    private AnchorPane depositsView;
 
     // ---------------- GETTERS ----------------
 
@@ -57,39 +72,67 @@ public class ViewFactory {
 
     public AnchorPane getDashboardView() {
         if (dashboardView == null) {
-            dashboardView = loadAnchorPane("/Fxml/Client/Dashboard.fxml");
+          try{  dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/Dashboard.fxml")).load();
+          }catch (Exception e){
+              e.printStackTrace();          }
         }
         return dashboardView;
     }
 
     public AnchorPane getTransactionView() {
         if (transactionView == null) {
-            transactionView = loadAnchorPane("/Fxml/Client/Transaction.fxml");
+       try{         transactionView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fxml")).load();
+       }catch (Exception e){
+           e.printStackTrace();       }
         }
         return transactionView;
     }
 
     public AnchorPane getAccountsView() {
         if (accountsView == null) {
-            accountsView = loadAnchorPane("/Fxml/Client/Accounts.fxml");
+            try {
+                accountsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Accounts.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-        return accountsView;
+           return accountsView;
     }
 
     // ---------------- ADMIN VIEWS ----------------
 
     public AnchorPane getCreateClientView() {
         if (createClientView == null) {
-            createClientView = loadAnchorPane("/Fxml/Admin/CreateClient.fxml");
+            try {
+                createClientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/CreateClient.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
         return createClientView;
     }
 
     public AnchorPane getClientsView() {
         if (clientsView == null) {
-            clientsView = loadAnchorPane("/Fxml/Admin/Clients.fxml");
+            try {
+                clientsView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Clients.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
         return clientsView;
+    }
+    public AnchorPane getDepositsView() {
+        if (depositsView == null) {
+            try {
+                depositsView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Deposits.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return depositsView;
     }
 
     // ---------------- WINDOWS ----------------

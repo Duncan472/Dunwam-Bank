@@ -19,25 +19,22 @@ public class ClientController implements Initializable {
 
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        addListeners();
-
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) { addListeners();    }
 
     public void addListeners() {
         dashboard_btn.setOnAction(actionEvent -> onDashboard());
         transaction_btn.setOnAction(actionEvent -> onTransactions());
         account_btn.setOnAction(actionEvent -> onAccounts());
 }
-
-    public void onTransactions() {
+    private void onTransactions() {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.TRANSACTIONS);
     }
 
-    public void onDashboard() {
+    private void onDashboard() {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.DASHBOARD);
     }
-    public void onAccounts(){
+    private void onAccounts(){
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.ACCOUNTS);
     }
+
 }
