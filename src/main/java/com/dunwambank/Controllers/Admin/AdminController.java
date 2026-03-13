@@ -24,18 +24,15 @@ public class AdminController implements Initializable {
 
                     if (newValue == null) return;
 
-                    switch (newValue) {  case CREATE_CLIENT -> admin_parent.setCenter( Model.getInstance().getViewFactory().getClientsView()Model.getInstance().getViewFactory().getCreateClientView()
-                                );
+                    switch (newValue) {  case CREATE_CLIENT -> admin_parent.setCenter( Model.getInstance().getViewFactory().getClientsView());
 
-                        case CLIENTS ->
-                                admin_parent.setCenter(
-                                        Model.getInstance().getViewFactory().getClientsView()
-                                );
+                        case CLIENTS -> admin_parent.setCenter(Model.getInstance().getViewFactory().getClientsView());
 
                         case DEPOSITS ->
                                 admin_parent.setCenter(
                                         Model.getInstance().getViewFactory().getDepositsView()
                                 );
+                        default -> admin_parent.setCenter(Model.getInstance().getViewFactory().getCreateClientView());
                     }
                 });
     }
