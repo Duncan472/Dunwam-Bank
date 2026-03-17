@@ -3,4 +3,5 @@ import javafx.fxml.Initializable;
 
 
 public class TransactionCellController {
+
 }
