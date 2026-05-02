@@ -25,5 +25,11 @@ public class Client {
         this.savingsAccount = new SimpleObjectProperty<>(this, "savingsAccount", sAccount);
         this.dateCreated = new SimpleObjectProperty<>(this, "dateCreated", date);
     }
+    public StringProperty firstNameProperty() {return this.firstName;}
+    public StringProperty lastNameProperty() {return this.lastName;}
+    public StringProperty payeeAddressProperty() {return this.payeeAddress;}
+    public ObjectProperty<AccountType> checkingAccountProperty() {return this.checkingAccount;}
+    public ObjectProperty<AccountType> savingsAccountProperty() {return this.savingsAccount;}
+    public ObjectProperty<LocalDate> dateProperty() {return this.dateCreated;}
 
 }
