@@ -18,7 +18,7 @@ public class Client {
     private final ObjectProperty<LocalDate> dateCreated;
 
     public Client(String fName, String lName, String pAddress, LocalDate date,AccountType cAccount, AccountType sAccount ) {
-        this.firstName = new SimpleStringProperty(this "firstName", "fName");
+        this.firstName = new SimpleStringProperty(this, "firstName", "fName");
         this.lastName = new SimpleStringProperty(this, "lastName", lName);
         this.payeeAddress = new SimpleStringProperty(this, "payeeAddress", pAddress);
         this.checkingAccount = new SimpleObjectProperty<>(this, "checkingAccount", cAccount);
