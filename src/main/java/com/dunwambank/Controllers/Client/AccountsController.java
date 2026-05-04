@@ -11,15 +11,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public abstract class AccountsController  implements Initializable{
+public class AccountsController implements Initializable{
 
     @FXML
-    public Label checkingTransactionLimit_lbl;
+    private Label checkingTransactionLimit_lbl;
 
     @FXML
-    public TextField amountToCheckingTextField;
-    @FXML
-    private TextField amountToCheckigTextField;
+    private TextField amountToCheckingTextField;
 
     @FXML
     private TextField amountToSavingsTextField;
@@ -50,12 +48,11 @@ public abstract class AccountsController  implements Initializable{
 
     @FXML
     private Label withdrawalLimit_lbl;
-//
-//        @Override
-//    public void initializable(URL url, ResourceBundle resourceBundle){
-//
-//        }
-
+    
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Initialize accounts view logic here
+    }
 
 }
 

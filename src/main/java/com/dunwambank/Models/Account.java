@@ -2,7 +2,6 @@ package com.dunwambank.Models;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.property.SimpleStringProperty;
 
 public class Account {
     private final StringProperty owner;
@@ -16,10 +15,10 @@ public class Account {
         this.balance = new javafx.beans.property.SimpleDoubleProperty(this, "Balance", balance);
     }
 
-    public String ownerProperty() {
+    public StringProperty ownerProperty() {
         return owner;
     }
-    public String accountNumberProperty() {return accountNumber;}
-    public double balanceProperty() {return balance.get();}
+    public StringProperty accountNumberProperty() {return accountNumber;}
+    public DoubleProperty balanceProperty() {return balance;}
 
 }

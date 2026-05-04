@@ -1,7 +1,6 @@
 package com.dunwambank.Models;
 
 import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
 public class SavingsAccount extends Account {
@@ -13,7 +12,7 @@ public class SavingsAccount extends Account {
         this.withdrawalLimit = new SimpleDoubleProperty(this, "Withdrawal Limit", withdrawalLimit);
     }
 
-    public IntegerProperty withdrawalLimitProp() {
+    public DoubleProperty withdrawalLimitProp() {
         return withdrawalLimit;
     }
 }

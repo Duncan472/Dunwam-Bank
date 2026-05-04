@@ -81,7 +81,7 @@ public class ViewFactory {
 
     public AnchorPane getTransactionView() {
         if (transactionView == null) {
-       try{         transactionView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fxml")).load();
+       try{         transactionView = new FXMLLoader(getClass().getResource("/Fxml/Client/transactions.fxml")).load();
        }catch (Exception e){
            e.printStackTrace();       }
         }
@@ -137,8 +137,18 @@ public class ViewFactory {
 
     // ---------------- WINDOWS ----------------
 
+    private Stage primaryStage;
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
+
     public void showLoginWindow() {
-        createStage("/Fxml/Login.fxml", "Dunwam Bank - Login");
+        if (primaryStage != null) {
+            createStageWithPrimary("/Fxml/Login.fxml", "Dunwam Bank - Login", primaryStage);
+        } else {
+            createStage("/Fxml/Login.fxml", "Dunwam Bank - Login");
+        }
     }
 
     public void showAdminWindow() {
@@ -163,6 +173,19 @@ public class ViewFactory {
         }
     }
 
+    private void createStageWithPrimary(String fxmlPath, String title, Stage stage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+            stage.setScene(new Scene(root));
+            stage.setTitle(title);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Error loading FXML: " + fxmlPath);
+            e.printStackTrace();
+        }
+    }
+
     private void createStage(String fxmlPath, String title) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
@@ -171,6 +194,7 @@ public class ViewFactory {
             stage.setTitle(title);
             stage.show();
         } catch (Exception e) {
+            System.err.println("Error loading FXML: " + fxmlPath);
             e.printStackTrace();
         }
     }
