@@ -1,8 +1,6 @@
 package com.dunwambank.Models;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DatabaseDriver {
     private Connection connection;
@@ -14,4 +12,33 @@ public class DatabaseDriver {
             e.printStackTrace();
         }
     }
+
+/*
+    Client Section
+    */
+public ResultSet getClientData(String pAddress, String password) {
+    Statement statement;
+    ResultSet resultSet = null;
+
+    try {
+        statement = this.connection.createStatement();
+        resultSet = statement.executeQuery(
+                "SELECT * FROM Clients WHERE PayeeAddress='" + pAddress + "' AND Password='" + password + "';"
+        );
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return resultSet;
+}
+
+
+    /*
+
+    admin Section
+     */
+
+    /*
+    Utility methods
+     */
 }
