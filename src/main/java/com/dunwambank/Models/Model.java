@@ -5,6 +5,7 @@ import com.dunwambank.views.ViewFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class Model {
     private static Model model;
@@ -65,7 +66,13 @@ public class Model {
                        this.client.firstNameProperty().set(resultSet.getString("firstName"));
                    this.client.lastNameProperty().set(resultSet.getString("lastName"));
                    this.client.payeeAddressProperty().set(resultSet.getString("payeeAddress"));
-        } catch (SQLException ex) {
+                   String[] dateParts = resultSet.getString("Date").split("-");
+            LocalDate date = LocalDate.of(Integer.parseInt(dateParts[0]), Integer.parseInt(dateParts[1]), Integer.parseInt(dateParts[2]));
+            this.client.dateProperty().set(date);
+                   this.clientLoginSuccessFlag = true;
+
+        }
+        catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
     }

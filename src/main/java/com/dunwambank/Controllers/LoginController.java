@@ -19,6 +19,13 @@ public class LoginController implements Initializable {
     private Button cancelButton;
     @FXML
     private ChoiceBox<AccountType> choiceBoxAccount;
+    @FXML
+    private TextField payeeAddressTextField;
+    @FXML
+    private PasswordField passwordField;
+    @FXML
+    private Label error_label;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -42,12 +49,21 @@ public class LoginController implements Initializable {
                 .setLoginAccountType(selected);
 
         Stage stage = (Stage) loginButton.getScene().getWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
-
-        if (selected == AccountType.ADMIN) {
-            Model.getInstance().getViewFactory().showAdminWindow();
-        } else {
+        if (selected == AccountType.CLIENT) {
             Model.getInstance().getViewFactory().showClientWindow();
+            Model.getInstance().evaluateClientCredentials(payeeAddressTextField.getText(), passwordField.getText());
+            if(Model.getInstance().getClientLoginSuccessFlag()) {
+                Model.getInstance().getViewFactory().showClientWindow();
+            } else {
+                payeeAddressTextField.setText("");
+                passwordField.setText("");
+                error_label.setVisible(true);
+                error_label.setText("Invalid Credentials");
+                Model.getInstance().getViewFactory().closeStage(stage);
+            }
+
+        } else {
+            Model.getInstance().getViewFactory().showAdminWindow();
         }
     }
 
