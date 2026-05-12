@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75247685-4d12-446d-861c-9a54bfd4a8e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dunwambank.db" beforeDir="false" afterPath="$PROJECT_DIR$/dunwambank.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dunwambank.db-journal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dunwambank/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dunwambank/Models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dunwambank/Models/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dunwambank.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/dunwambank.sqbpro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

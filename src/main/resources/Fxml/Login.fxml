@@ -9,6 +9,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../Styles/Login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dunwambank.Controllers.LoginController">
    <children>
@@ -23,17 +24,23 @@
             <Label layoutX="93.0" layoutY="208.0" text="Password:" />
             <PasswordField fx:id="passwordField" layoutX="164.0" layoutY="204.0" />
             <ChoiceBox fx:id="choiceBoxAccount" layoutX="166.0" layoutY="70.0" prefWidth="150.0" />
-            <Label layoutX="35.0" layoutY="74.0" text="Choose Your Account:" />
+            <Label layoutX="35.0" layoutY="74.0" text="Choose Your Account:">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></Label>
             <Label fx:id="error_label" layoutX="163.0" layoutY="306.0" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="237.0" styleClass="login_logo_container">
+      <AnchorPane prefHeight="400.0" prefWidth="244.0" styleClass="login_logo_container">
          <children>
             <ImageView fx:id="loginImage" fitHeight="163.0" fitWidth="195.0" layoutX="37.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/icons8-bank-100.png" />
                </image></ImageView>
-            <Label layoutX="80.0" layoutY="226.0" styleClass="login_logo_container text" text="DunwamBank" />
+            <Label layoutX="46.0" layoutY="229.0" styleClass="login_logo_container text" text="DunwamBank">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </children>
